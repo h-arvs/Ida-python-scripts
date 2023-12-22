@@ -11,7 +11,7 @@ This will open up an explorer, you can then select a script and press 'Open' to 
 
 ## Vtable Scripts
 ### [dumper.py](/Vtables/dumper.py)
-I will use this script to dump a vtable from a dissasembly that has symbols for use in paster.py
+I will use this script to dump a vtable from a dissasembly that has symbols for use in paster.py.
 To use the dumper script, select a partion of a vtable:  
 <ins>Minecraft BDS with symbols</ins>
 ![image](https://github.com/h-arvs/Ida-python-scripts/assets/74739443/2fc1fdd2-c97e-41d9-aa96-866602113c8e)
