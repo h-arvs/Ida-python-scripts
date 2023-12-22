@@ -1,7 +1,7 @@
-import ida.idaapi as api
-import ida.idautils as utils
+import idaapi as api
+import idautils as utils
 import ida_name as idaname
-import ida.idc as idc
+import idc as idc
 import json
 
 # ask for a path

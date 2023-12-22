@@ -1,5 +1,5 @@
-import ida.idaapi as api
-import ida.idc as idc
+import idaapi as api
+import idc as idc
 import json
 
 # ask for the dumped file from dumper.py
