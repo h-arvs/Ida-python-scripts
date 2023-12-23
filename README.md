@@ -10,8 +10,9 @@ This will open up an explorer, you can then select a script and press 'Open' to 
 ![image](https://github.com/h-arvs/Ida-python-scripts/assets/74739443/fe8b26bb-1777-46e9-a0ab-24c7830f0427)
 
 ## Vtable Scripts
+<a id="dumperpy"></a>
 ### [dumper.py](/Vtables/dumper.py)
-I will use this script to dump a vtable from a dissasembly that has symbols for use in paster.py.
+This script will dump all indexes and mangled func name + some other info into a json file, this is for use with paster.py
 To use the dumper script, select a partion of a vtable:  
 <ins>Minecraft BDS with symbols</ins>
 ![image](https://github.com/h-arvs/Ida-python-scripts/assets/74739443/2fc1fdd2-c97e-41d9-aa96-866602113c8e)
@@ -25,8 +26,12 @@ The dumper will run and output the file with that name in the directory you gave
 ![image](https://github.com/h-arvs/Ida-python-scripts/assets/74739443/597605a3-b11d-4902-b812-0b9f58920ece)
 Yayyyyy vtable dumped :)))
 
+### [indexdumper.py](/Vtables/indexdumper.py)
+This script will dump all indexes of functions in a vtable, along with their demangled name.
+It has the exact same usage as dumper.py, except dumps into a txt file.
+
 ### [paster.py](/Vtables/paster.py)
-I will use this script to name functions in a vtable on a client dissassembly from the server dissasembly.
+This script will paste results of dumper.py onto another vtable, it will name each function in one vtable with corresponding function in the dump.
 To use this script, again select a partition from the vtable you dumped but on, in my case, the client db.  
 <ins>Minecraft Bedrock client without symbols</ins>
 ![image](https://github.com/h-arvs/Ida-python-scripts/assets/74739443/4e2dac6f-6db9-4865-aa2e-8c7fdc7e2214)
