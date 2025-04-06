@@ -8,3 +8,4 @@ These scripts are designed for [IDA Pro](https://hex-rays.com/ida-pro) and are w
 
 ## Index
 ### [Vtables](./Vtables/README.md)
+### [Strings](./Strings/README.md)
