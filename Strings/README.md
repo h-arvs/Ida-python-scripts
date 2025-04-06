@@ -5,7 +5,7 @@ Resolves a string path to a function
 
 ### USAGE
 
-- Put IDA cursor in the func you to generate a string path want to generate a string path to
+- Put IDA cursor in the func you want to generate a string path to
 
 ![](./Res/stringpath1.png)
 - Run script
