@@ -41,7 +41,10 @@ def do(depth: int):
     funcs = [(initial, f"{hex(initial.start_ea)} (Your function)")]
     newfuncs = []
 
+    strings = []
+
     iteration = 0
+    print("Searching for strings...")
     while True:
 
         if not funcs:
@@ -51,10 +54,9 @@ def do(depth: int):
         for func, path in funcs:
             strings2 = get_strings(func)
             for string, addr in strings2:
-                print(f"String {string} found at {hex(addr)} in {path}")
+                strings.append((string, hex(addr), path))
 
         if iteration == depth:
-            print("Finished!")
             break
 
         for func, path in funcs:
@@ -65,6 +67,11 @@ def do(depth: int):
 
         funcs = newfuncs.copy()
         newfuncs.clear()
+
+    for i in reversed(strings):
+        print(f"String found {i[0]} at {i[1]} in {i[2]}")
+
+    print("Finished!")
 
 
 do(depth)
