@@ -38,7 +38,7 @@ def do(depth: int):
 
     initial = api.get_func(cursor)
 
-    funcs = [(initial, hex(initial.start_ea))]
+    funcs = [(initial, f"{hex(initial.start_ea)} (Your function)")]
     newfuncs = []
 
     iteration = 0
@@ -61,7 +61,7 @@ def do(depth: int):
             for xref in utils.XrefsTo(func.start_ea, xr.XREF_ALL):
                 x = api.get_func(xref.frm)
                 if x:
-                    newfuncs.append((x, f"{hex(x.start_ea)} -> {path}"))
+                    newfuncs.append((x, f"{hex(xref.frm)} -> {path}"))
 
         funcs = newfuncs.copy()
         newfuncs.clear()
